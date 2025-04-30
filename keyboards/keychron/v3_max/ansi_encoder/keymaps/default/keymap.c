@@ -89,6 +89,50 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 // clang-format on
 
 
+///// 用 Key Overrides 实现 自己顺手的功能
+// 以下覆盖“仅在第 4 层（COMBO_LAYER）且按住任意 Shift + ; 输出 :”
+static const key_override_t ko_colon = ko_make_with_layers(
+    MOD_MASK_SHIFT,    // 监测任意 Shift（左右皆可）
+    KC_A,              // 原键：分号 (;)
+    KC_COLN,           // 目标：冒号 (:)
+    (1 << 4)           // 仅在层索引 4 生效
+);
+
+// 其他覆盖同理
+static const key_override_t ko_less = ko_make_with_layers(
+    MOD_MASK_SHIFT,
+    KC_C,              // 原键：逗号 (,)
+    KC_LT,             // 目标：小于号 (<)
+    (1 << 4)
+);
+
+static const key_override_t ko_greater = ko_make_with_layers(
+    MOD_MASK_SHIFT,
+    KC_X,            // 原键：句号 (.)
+    KC_GT,             // 目标：大于号 (>)
+    (1 << 4)
+);
+
+static const key_override_t ko_question = ko_make_with_layers(
+    MOD_MASK_SHIFT,
+    KC_Z,           // 原键：斜杠 (/)
+    KC_QUES,           // 目标：问号 (?)
+    (1 << 4)
+);
+
+// 汇总所有覆盖
+const key_override_t **key_overrides = (const key_override_t *[]){
+    &ko_colon,
+    &ko_less,
+    &ko_greater,
+    &ko_question,
+    NULL
+};
+/// END
+
+
+
+
 bool first_run_shoud_disable_combo = true;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
