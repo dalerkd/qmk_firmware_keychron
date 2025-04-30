@@ -16,6 +16,16 @@
 
 #pragma once
 
+
+/*
+    这里是配合 当 COMBO层键位设计 发生变化时，比如 j=>f ,就无法触筏 原j键的并击.(因为这一层根本就没有j键了)
+    所以此时无法参考这一层做COMBO并击了,必须寻找 基本层做参考:
+*/
+#define COMBO_ONLY_FROM_LAYER 2 // 【WIN_BASE】 层
+#define COMBO_TERM 200     // combo触发时间窗口
+#define FORCE_NKRO
+
+
 #ifdef RGB_MATRIX_ENABLE
 /* RGB Matrix driver configuration */
 #    define DRIVER_COUNT 2
