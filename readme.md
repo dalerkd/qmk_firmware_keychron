@@ -22,6 +22,9 @@
 不用担心刷出BUG,而无法恢复,因为官方提供了恢复固件:
 \keyboards\keychron\v3_max\firmware\
 
+上键盘靓照:
+![Keychron V3 Max](https://cdn.shopify.com/s/files/1/0059/0630/1017/files/Keychron-V3-Max-wireless-mechanical-keyboard.jpg?v=1708237297)
+
 # Quantum Mechanical Keyboard Firmware
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
