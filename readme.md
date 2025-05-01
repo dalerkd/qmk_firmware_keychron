@@ -11,8 +11,10 @@
 项目地址：[https://github.com/dalerkd/KongMingMaInputQMKHelper](https://github.com/dalerkd/KongMingMaInputQMKHelper)
 
 
-## 具体情况
-键盘: keychron/v3_max 型号键盘,256KB存储空间.我的1159组并击实现之后+之前原有的固件,共使用了139KB.
+## 具体配置
+* 键盘: keychron/v3_max 型号键盘
+* 256KB存储空间
+我的1159组并击实现之后+之前原有的固件,共使用了139KB.
 
 编译+刷写指令:
 `make keychron/v3_max/ansi_encoder:default:flash`
